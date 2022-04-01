@@ -1,0 +1,19 @@
+<div class="mt-10 flex flex-wrap">
+    <div class="container">
+        <mat-list>
+            <div mat-subheader>Base Images</div>
+            <mat-list-item *ngFor="let image of baseImages">
+                <mat-icon mat-list-icon>image</mat-icon>
+                <div mat-line>{{image.name}}</div>
+                <div mat-line> {{image.cloudType}} </div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <div mat-subheader>Images</div>
+            <mat-list-item *ngFor="let image of images">
+                <mat-icon mat-list-icon>note</mat-icon>
+                <div mat-line>{{image.name}}</div>
+                <div mat-line> {{image.cloudType}} </div>
+            </mat-list-item>
+        </mat-list>
+    </div>
+</div>
