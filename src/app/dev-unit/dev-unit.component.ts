@@ -15,6 +15,7 @@ import { DevUnitHttpService } from './dev-unit-http.service';
   styleUrls: ['./dev-unit.component.scss']
 })
 export class DevUnitComponent implements OnInit {
+  panelOpenState = false;
 
   /*folders: Section[] = [
     {
