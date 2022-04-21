@@ -16,6 +16,10 @@
       <fa-icon [icon]="faRobot"></fa-icon>
       <span class="sidebar-tooltip scale-100">Plugin</span>
     </div>
+    <div class="sidebar-icon group" (click)="changeView('inventory')">
+      <fa-icon [icon]="faThList"></fa-icon>
+      <span class="sidebar-tooltip scale-100">Inventory</span>
+    </div>
   </div>
 </div>
 
@@ -24,3 +28,4 @@
 <app-dev-unit *ngIf="showView==='dev-unit'"></app-dev-unit>
 <app-prod-unit *ngIf="showView==='prod-unit'"></app-prod-unit>
 <app-plugins *ngIf="showView==='plugins'"></app-plugins>
+<app-inventory *ngIf="showView==='inventory'"></app-inventory>

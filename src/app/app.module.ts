@@ -14,6 +14,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialExampleModule } from './material.module';
 import { PluginsComponent } from './plugins/plugins.component';
+import { InventoryComponent } from './inventory/inventory.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { PluginsComponent } from './plugins/plugins.component';
     ImageRegistryComponent,
     DevUnitComponent,
     ProdUnitComponent,
-    PluginsComponent
+    PluginsComponent,
+    InventoryComponent
   ],
   imports: [
     BrowserAnimationsModule,
