@@ -36,7 +36,7 @@
                     <!-- list ORGs -->
 
                     <mat-selection-list #org [multiple]="false">
-                        <mat-list-option *ngFor="let org of orgList; let i = index" [value]="org.name">
+                        <mat-list-option *ngFor="let org of orgList; let i = index" [value]="org.name" (click)="selectOrg(i)">
                             <mat-icon mat-list-icon (click)="removeOrg(i)">delete</mat-icon>
                             {{org.name}}
                         </mat-list-option>
@@ -77,7 +77,7 @@
                     <!-- list PROJECTs -->
 
                     <mat-selection-list #prj [multiple]="false">
-                        <mat-list-option *ngFor="let prj of prjList; let i = index" [value]="prj.name">
+                        <mat-list-option *ngFor="let prj of prjList; let i = index" [value]="prj.name" (click)="selectPrj(i)">
                             <mat-icon mat-list-icon (click)="removeProject(i)">delete</mat-icon>
                             {{prj.name}}
                         </mat-list-option>
