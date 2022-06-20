@@ -34,9 +34,12 @@
                     </form>
 
                     <!-- list ORGs -->
+                    <br />
+                    <div class="text-gray-900 font-bold text-xl mb-2">Select Org:</div>
 
                     <mat-selection-list #org [multiple]="false">
-                        <mat-list-option *ngFor="let org of orgList; let i = index" [value]="org.name" (click)="selectOrg(i)">
+                        <mat-list-option *ngFor="let org of orgList; let i = index" [value]="org.name"
+                            (click)="selectOrg(i)">
                             <mat-icon mat-list-icon (click)="removeOrg(i)">delete</mat-icon>
                             {{org.name}}
                         </mat-list-option>
@@ -45,7 +48,7 @@
 
             </div>
             <div class="col-span-1 border-r-4">
-               
+
                 <!-- new PROJECT -->
                 <section class="example-button-row m-3">
                     <form [formGroup]="FormInputs" (ngSubmit)="addProject(FormInputs)">
@@ -75,9 +78,12 @@
                     </form>
 
                     <!-- list PROJECTs -->
+                    <br />
+                    <div class="text-gray-900 font-bold text-xl mb-2">Select Project:</div>
 
                     <mat-selection-list #prj [multiple]="false">
-                        <mat-list-option *ngFor="let prj of prjList; let i = index" [value]="prj.name" (click)="selectPrj(i)">
+                        <mat-list-option *ngFor="let prj of prjList; let i = index" [value]="prj.name"
+                            (click)="selectPrj(i)">
                             <mat-icon mat-list-icon (click)="removeProject(i)">delete</mat-icon>
                             {{prj.name}}
                         </mat-list-option>
@@ -86,11 +92,18 @@
             </div>
             <div class="col-span-1">
                 <div class="text-gray-900 font-bold text-xl mb-2">RESOURCEs (L3)</div>
-                <br/>
-                <br/>
-                <label>repo details</label>
-                <br/>
-                <label>repo name</label>
+                <br />
+                <br />
+                <div>
+                    <label class="block text-gray-500 font-bold  mb-1 md:mb-0 pr-4" for="inline-full-name">
+                        Repo Details:
+                    </label>
+                </div>
+                <div>
+                    <label class="block font-bold mb-1 md:mb-0 pr-4" for="inline-full-name">
+                        Name
+                    </label>
+                </div>
             </div>
         </div>
 

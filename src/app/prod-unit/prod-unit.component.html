@@ -1,3 +1,166 @@
-<div class="mt-20 flex flex-wrap justify-center">
-    <img src="../../assets/puppycat.png" alt="puppycat">
+<div class="flex justify-center items-center top-0 left-0 w-screen m-0 mt-10">
+  <div class="container">
+
+    <div class="text-gray-900 font-bold text-xl mb-2">Ready For Deployments</div>
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let unit of deployedList" hideToggle>
+        <mat-expansion-panel-header class="w-full">
+          <mat-panel-title class="w-full">
+            <div class="grid grid-cols-6 gap-4 w-full">
+              <div class="col-span-5">{{unit.l3}}</div>
+              <div class="col-span-1">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                  deploy
+                </button>
+              </div>
+            </div>
+          </mat-panel-title>
+          <!--<mat-panel-description>
+            <mat-icon>more_horiz</mat-icon>
+          </mat-panel-description>-->
+        </mat-expansion-panel-header>
+        <div>
+          <form class="w-full ml-10">
+            <div class="flex mb-12">
+              <div class="w-2/12">
+                <label class="block text-gray-500 font-bold  mb-1 md:mb-0 pr-4" for="inline-full-name">
+                  Organization:
+                </label>
+              </div>
+              <div class="w-2/12">
+                <label class="block font-bold mb-1 md:mb-0 pr-4" for="inline-full-name">
+                  {{unit.l1}}
+                </label>
+              </div>
+              <div class="w-2/12">
+                <label class="block text-gray-500 font-bold  mb-1 md:mb-0 pr-4" for="inline-full-name">
+                  Project:
+                </label>
+              </div>
+              <div class="w-2/12">
+                <label class="block font-bold mb-1 md:mb-0 pr-4" for="inline-full-name">
+                  {{unit.l2}}
+                </label>
+              </div>
+            </div>
+            <div class="flex mb-12">
+              <div class="w-2/12">
+                <label class="block text-gray-500 font-bold  mb-1 md:mb-0 pr-4" for="inline-full-name">
+                  Updated Date:
+                </label>
+              </div>
+              <div class="w-2/12">
+                <label class="block font-bold mb-1 md:mb-0 pr-4" for="inline-full-name">
+                  {{unit.updatedDate}}
+                </label>
+              </div>
+              <div class="w-2/12">
+                <label class="block text-gray-500 font-bold  mb-1 md:mb-0 pr-4" for="inline-full-name">
+                  Last Deployment:
+                </label>
+              </div>
+              <div class="w-2/12">
+                <label class="block font-bold mb-1 md:mb-0 pr-4" for="inline-full-name">
+                  {{unit.deployedDate}}
+                </label>
+              </div>
+            </div>
+            <div class="flex mb-12">
+              <div class="w-2/12">
+                <label class="block text-gray-500 font-bold  mb-1 md:mb-0 pr-4" for="inline-full-name">
+                  Repo Location:
+                </label>
+              </div>
+              <div class="w-11/12">
+                <label class="block font-bold mb-1 md:mb-0 pr-4" for="inline-full-name">
+                  {{unit.repoLocation}}
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+    <br />
+    <div class="text-gray-900 font-bold text-xl mb-2">Last Deployments</div>
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let unit of deployedHistoryList" hideToggle>
+        <mat-expansion-panel-header class="w-full">
+          <mat-panel-title class="w-full">
+            <div class="grid grid-cols-6 gap-4 w-full">
+              <div class="col-span-5">{{unit.l3}}</div>
+              <div class="col-span-1">
+
+              </div>
+            </div>
+          </mat-panel-title>
+          <!--<mat-panel-description>
+            <mat-icon>more_horiz</mat-icon>
+          </mat-panel-description>-->
+        </mat-expansion-panel-header>
+        <div>
+          <form class="w-full ml-10">
+            <div class="flex mb-12">
+              <div class="w-2/12">
+                <label class="block text-gray-500 font-bold  mb-1 md:mb-0 pr-4" for="inline-full-name">
+                  Organization:
+                </label>
+              </div>
+              <div class="w-2/12">
+                <label class="block font-bold mb-1 md:mb-0 pr-4" for="inline-full-name">
+                  {{unit.l1}}
+                </label>
+              </div>
+              <div class="w-2/12">
+                <label class="block text-gray-500 font-bold  mb-1 md:mb-0 pr-4" for="inline-full-name">
+                  Project:
+                </label>
+              </div>
+              <div class="w-2/12">
+                <label class="block font-bold mb-1 md:mb-0 pr-4" for="inline-full-name">
+                  {{unit.l2}}
+                </label>
+              </div>
+            </div>
+            <div class="flex mb-12">
+              <div class="w-2/12">
+                <label class="block text-gray-500 font-bold  mb-1 md:mb-0 pr-4" for="inline-full-name">
+                  Updated Date:
+                </label>
+              </div>
+              <div class="w-2/12">
+                <label class="block font-bold mb-1 md:mb-0 pr-4" for="inline-full-name">
+                  {{unit.updatedDate}}
+                </label>
+              </div>
+              <div class="w-2/12">
+                <label class="block text-gray-500 font-bold  mb-1 md:mb-0 pr-4" for="inline-full-name">
+                  Last Deployment:
+                </label>
+              </div>
+              <div class="w-2/12">
+                <label class="block font-bold mb-1 md:mb-0 pr-4" for="inline-full-name">
+                  {{unit.deployedDate}}
+                </label>
+              </div>
+            </div>
+            <div class="flex mb-12">
+              <div class="w-2/12">
+                <label class="block text-gray-500 font-bold  mb-1 md:mb-0 pr-4" for="inline-full-name">
+                  Repo Location:
+                </label>
+              </div>
+              <div class="w-11/12">
+                <label class="block font-bold mb-1 md:mb-0 pr-4" for="inline-full-name">
+                  {{unit.repoLocation}}
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+  </div>
 </div>
