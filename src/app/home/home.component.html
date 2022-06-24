@@ -20,6 +20,10 @@
       <fa-icon [icon]="faThList"></fa-icon>
       <span class="sidebar-tooltip scale-100">Inventory</span>
     </div>
+    <div class="sidebar-icon group" (click)="changeView('settings')">
+      <fa-icon [icon]="faCog"></fa-icon>
+      <span class="sidebar-tooltip scale-100">Settings</span>
+    </div>
   </div>
 </div>
 
@@ -29,3 +33,4 @@
 <app-prod-unit *ngIf="showView==='prod-unit'"></app-prod-unit>
 <app-plugins *ngIf="showView==='plugins'"></app-plugins>
 <app-inventory *ngIf="showView==='inventory'"></app-inventory>
+<app-setting *ngIf="showView==='settings'"></app-setting>

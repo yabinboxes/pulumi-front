@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialExampleModule } from './material.module';
 import { PluginsComponent } from './plugins/plugins.component';
 import { InventoryComponent } from './inventory/inventory.component';
+import { SettingComponent } from './setting/setting.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { InventoryComponent } from './inventory/inventory.component';
     DevUnitComponent,
     ProdUnitComponent,
     PluginsComponent,
-    InventoryComponent
+    InventoryComponent,
+    SettingComponent
   ],
   imports: [
     BrowserAnimationsModule,

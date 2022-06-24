@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faCubes, faRocket, faRobot, faLaptopCode, faThList } from '@fortawesome/free-solid-svg-icons';
+import { faCubes, faRocket, faRobot, faLaptopCode, faThList, faCog } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home',
@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   faRobot = faRobot;
   faLaptopCode = faLaptopCode;
   faThList = faThList;
+  faCog = faCog;
 
   showView = "inventory";
 
