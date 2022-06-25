@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { GoogleApiService, UserInfo } from '../google-api.service';
+
 @Component({
   selector: 'app-setting',
   templateUrl: './setting.component.html',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SettingComponent implements OnInit {
 
-  constructor() { }
+  public userInfo: UserInfo
+
+  constructor(private readonly googleApi: GoogleApiService) { 
+    this.userInfo = this.googleApi.userInfo
+  }
 
   ngOnInit(): void {
   }

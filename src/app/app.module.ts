@@ -2,7 +2,6 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatNativeDateModule } from '@angular/material/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +15,10 @@ import { MaterialExampleModule } from './material.module';
 import { PluginsComponent } from './plugins/plugins.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { SettingComponent } from './setting/setting.component';
+import { OAuthModule } from 'angular-oauth2-oidc';
+
+// OAuth
+
 
 
 @NgModule({
@@ -37,9 +40,10 @@ import { SettingComponent } from './setting/setting.component';
     FontAwesomeModule,
     FormsModule,
     ReactiveFormsModule,
-    MatNativeDateModule,
     // Material
-    MaterialExampleModule
+    MaterialExampleModule,
+    // OAuth
+    OAuthModule.forRoot()
   ],
   providers: [],
   schemas: [
