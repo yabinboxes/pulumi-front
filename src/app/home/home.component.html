@@ -24,6 +24,10 @@
       <fa-icon [icon]="faCog"></fa-icon>
       <span class="sidebar-tooltip scale-100">Settings</span>
     </div>
+    <div class="sidebar-icon group" (click)="changeView('metrics')">
+      <fa-icon [icon]="faChartArea"></fa-icon>
+      <span class="sidebar-tooltip scale-100">Metrics</span>
+    </div>
   </div>
 </div>
 
@@ -34,3 +38,4 @@
 <app-plugins *ngIf="showView==='plugins'"></app-plugins>
 <app-inventory *ngIf="showView==='inventory'"></app-inventory>
 <app-setting *ngIf="showView==='settings'"></app-setting>
+<app-metrics *ngIf="showView==='metrics'"></app-metrics>

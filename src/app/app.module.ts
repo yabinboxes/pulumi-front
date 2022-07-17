@@ -16,6 +16,7 @@ import { PluginsComponent } from './plugins/plugins.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { SettingComponent } from './setting/setting.component';
 import { OAuthModule } from 'angular-oauth2-oidc';
+import { MetricsComponent } from './metrics/metrics.component';
 
 // OAuth
 
@@ -30,7 +31,8 @@ import { OAuthModule } from 'angular-oauth2-oidc';
     ProdUnitComponent,
     PluginsComponent,
     InventoryComponent,
-    SettingComponent
+    SettingComponent,
+	MetricsComponent
   ],
   imports: [
     BrowserAnimationsModule,
