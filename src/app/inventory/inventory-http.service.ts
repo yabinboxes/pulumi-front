@@ -16,8 +16,8 @@ export class InventoryHttpService {
 
   constructor(private _http: HttpClient) { }
 
-  getInventory() {
-    return this._http.get('http://localhost:5000/inventory')
+  getInventory() {         
+    return this._http.get('http://localhost:8080/pulumi-orgs/')
   }
 
 

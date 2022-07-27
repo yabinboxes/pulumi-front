@@ -39,7 +39,7 @@ export class InventoryComponent implements OnInit {
     
     let myOrg = new OrgsModel();
     //myOrg.id = "1";
-    myOrg.name = form.value.orgName;
+    myOrg.orgName = form.value.orgName;
     this.orgList.push(myOrg);
   }
 
@@ -59,7 +59,7 @@ export class InventoryComponent implements OnInit {
    
     let myProject = new ProjectModel();
     //myProject.id = "1";
-    myProject.name = form.value.projectName;
+    myProject.projectName = form.value.projectName;
     this.prjList.push(myProject);
   }
 

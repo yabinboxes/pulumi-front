@@ -1,4 +1,4 @@
 export class ProjectModel {
     public description?: string;
-    public name?: string;
+    public projectName?: string;
 }

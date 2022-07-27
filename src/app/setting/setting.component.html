@@ -2,8 +2,19 @@
     <div class="container">
         <div class="grid grid-cols-5 gap-2 min-w-fit">
 
-            <div class="col-span-1 min-h-fit">menu</div>
-            <div class="col-span-4 min-h-fit">Name: {{ userInfo?.info?.email }}</div>
+            <div class="col-span-1 min-h-fit">
+                <mat-selection-list #shoes [multiple]="false">
+                    <mat-list-option *ngFor="let shoe of typesOfShoes" [value]="shoe">
+                        {{shoe}}
+                    </mat-list-option>
+                </mat-selection-list>
+            </div>
+            <div class="col-span-4 min-h-fit">
+                Name: {{ userInfo?.info?.email }}
+                <br/>
+                <app-inventory></app-inventory>
+            </div>
+            
 
         </div>
     </div>
