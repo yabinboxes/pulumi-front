@@ -1,17 +1,17 @@
 <!--<div class="flex justify-center items-start top-0 left-0 w-screen m-0 mt-10  min-h-fit">-->
-    
-    
-    <div class="container">
 
-        <div class="grid grid-cols-3">
 
-            <div class="col-span-1 border-r-2 min-h-fit">
+<div class="container">
 
-                
-                <section class="example-button-row m-3">
-                    <form [formGroup]="FormInputs" (ngSubmit)="addOrg(FormInputs)">
-                        <div class="text-gray-900 font-bold text-xl mb-2">ORGs (L1)</div>
-                        <input type="text" class="
+    <div class="grid grid-cols-3">
+
+        <div class="col-span-1 border-r-2 min-h-fit">
+
+
+            <section class="example-button-row m-3">
+                <form [formGroup]="FormInputs" (ngSubmit)="addOrg(FormInputs)">
+                    <div class="text-gray-900 font-bold text-xl mb-2">ORGs (L1)</div>
+                    <input type="text" class="
         form-control
         block
         w-full
@@ -28,34 +28,34 @@
         m-0
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
       " id="exampleFormControlInput1" placeholder="Org name" formControlName="orgName" />
-                        <div class="w-full text-right m-0">
-                            <button type="submit" mat-raised-button color="primary" style="margin-right: 0px;">Add
-                                new org</button>
-                        </div>
-                        <mat-divider></mat-divider>
-                    </form> 
+                    <div class="w-full text-right m-0">
+                        <button type="submit" mat-raised-button color="primary" style="margin-right: 0px;">Add
+                            new org</button>
+                    </div>
+                    <mat-divider></mat-divider>
+                </form>
 
-                    
-                    <br />
-                    <div class="text-gray-900 font-bold text-xl mb-2">Select Org:</div>
 
-                    <mat-selection-list #org [multiple]="false">
-                        <mat-list-option *ngFor="let org of orgList; let i = index" [value]="org.name"
-                            (click)="selectOrg(i)">
-                            <mat-icon mat-list-icon (click)="removeOrg(i)">delete</mat-icon>
-                            {{org.orgName}}
-                        </mat-list-option>
-                    </mat-selection-list>
-                </section>
+                <br />
+                <div class="text-gray-900 font-bold text-xl mb-2">Select Org:</div>
 
-            </div>
-            <div class="col-span-1 border-r-2">
+                <mat-selection-list #org [multiple]="false">
+                    <mat-list-option *ngFor="let org of orgList; let i = index" [value]="org.orgName"
+                        (click)="selectOrg(i)">
+                        <mat-icon mat-list-icon (click)="removeOrg(i)">delete</mat-icon>
+                        {{org.orgName}}
+                    </mat-list-option>
+                </mat-selection-list>
+            </section>
 
-                
-                <section class="example-button-row m-3">
-                    <form [formGroup]="FormInputs" (ngSubmit)="addProject(FormInputs)">
-                        <div class="text-gray-900 font-bold text-xl mb-2">PROJECTs (L2)</div>
-                        <input type="text" class="
+        </div>
+        <div class="col-span-1 border-r-2">
+
+
+            <section class="example-button-row m-3">
+                <form [formGroup]="FormInputs" (ngSubmit)="addProject(FormInputs)">
+                    <div class="text-gray-900 font-bold text-xl mb-2">PROJECTs (L2)</div>
+                    <input type="text" class="
         form-control
         block
         w-full
@@ -72,42 +72,57 @@
         m-0
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
       " id="exampleFormControlInput1" placeholder="Project name" formControlName="projectName" />
-                        <div class="w-full text-right m-0">
-                            <button type="submit" mat-raised-button color="primary" style="margin-right: 0px;">Add
-                                new project</button>
-                        </div>
-                        <mat-divider></mat-divider>
-                    </form>
+                    <div class="w-full text-right m-0">
+                        <button type="submit" mat-raised-button color="primary" style="margin-right: 0px;" [disabled]="isDisabledPrjForm">Add
+                            new project</button>
+                    </div>
+                    <mat-divider></mat-divider>
+                </form>
 
-                   
-                    <br />
-                    <div class="text-gray-900 font-bold text-xl mb-2">Select Project:</div>
 
-                    <mat-selection-list #prj [multiple]="false">
-                        <mat-list-option *ngFor="let prj of prjList; let i = index" [value]="prj.name"
-                            (click)="selectPrj(i)">
-                            <mat-icon mat-list-icon (click)="removeProject(i)">delete</mat-icon>
-                            {{prj.name}}
-                        </mat-list-option>
-                    </mat-selection-list>
-                </section>
-            </div>
-            <div class="col-span-1">
-                <div class="text-gray-900 font-bold text-xl m-3">RESOURCEs (L3)</div>
                 <br />
-                <br />
-                <div>
-                    <label class="block text-gray-500 font-bold  m-3 md:mb-0 pr-4" for="inline-full-name">
-                        Repo Details:
-                    </label>
-                </div>
-                <div>
-                    <label class="block font-bold m-3 md:mb-0 pr-4" for="inline-full-name">
-                        Name
-                    </label>
-                </div>
-            </div>
+                <div class="text-gray-900 font-bold text-xl mb-2">Select Project:</div>
+
+                <mat-selection-list #prj [multiple]="false">
+                    <mat-list-option *ngFor="let prj of prjList; let j = index" [value]="prj.name"
+                        (click)="selectPrj(j)">
+                        <mat-icon mat-list-icon (click)="removeProject(j)">delete</mat-icon>
+                        {{prj.projectName}}
+                    </mat-list-option>
+                </mat-selection-list>
+            </section>
         </div>
+        <div class="col-span-1">
+            <div class="text-gray-900 font-bold text-xl m-3">RESOURCEs (L3)</div>
+            <br />
+            <br />
+            <div>
+                <label class="block text-gray-500 font-bold  m-3 md:mb-0 pr-4" for="inline-full-name">
+                    Repo Details: {{projectSelected.description}}
+                </label>
+            </div>
+            <div>
+                <label class="block font-bold m-3 md:mb-0 pr-4" for="inline-full-name">
+                    Name: {{projectSelected.projectName}}
+                </label>
+            </div>
+            <br/><br/>
+            <mat-list role="list">
+                <mat-list-item role="listitem" *ngFor="let service of projectSelected.services; let j = index"
+                    [value]="service.name">
+                    <div>
+                        {{service.name}}<br />
+                        {{service.type}}<br />
+                        {{service.location}}<br />
+                        {{service.techStack}}<br />
+                        {{service.costPeriod}}<br />
+                        {{service.cost}}<br />
+                    </div>
+                </mat-list-item>
 
+            </mat-list>
+        </div>
     </div>
+
+</div>
 <!--</div>-->
